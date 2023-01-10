@@ -21,9 +21,9 @@ public class Generics {
         printer.print();
         shout("HELLO");
         
-        List<Integer> myList = new ArrayList<>();
-        myList.add(12);
-        printList(myList);
+        List<Dog> dogList = new ArrayList<>();
+        dogList.add(new Dog());
+        printList(dogList);
         
     }
     
@@ -31,7 +31,7 @@ public class Generics {
             System.out.println(thingToShout + "!!");
     }
     
-    private static void printList(List<?> myList){
+    private static void printList(List<? extends Animal> myList){
         System.out.println(myList);
     }
 }
